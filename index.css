@@ -46,7 +46,7 @@ html {
   }
   
   #hi {
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
   }
   
   .grid-container h1 span {
@@ -262,6 +262,8 @@ html {
 
   .glass-box p{
     font-size: 2rem;
+    color: rgba(255, 255, 255, 0.76);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .glass-box:nth-child(1) {
@@ -351,6 +353,7 @@ html {
     font-size: 2rem;
     font-weight: 600;
     margin-top: 0;
+    margin-bottom: 3rem;
   }
 
   #about .bottom p:nth-child(1){
@@ -359,7 +362,7 @@ html {
 
   #about .bottom p:nth-child(2) {
     width: 60%;
-    margin-left: 20rem;
+    margin-left: 22rem;
   }
 
   #portfolio {
