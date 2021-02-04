@@ -23,7 +23,8 @@ html {
   
   body {
     background-image: url("./static/sky.png");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: 200% 130%;
     background-attachment: scroll;
   }
   
