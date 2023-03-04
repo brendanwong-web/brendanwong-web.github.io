@@ -6,7 +6,7 @@
 
 html {
   width: 100vw; 
-  font-size: 18px;
+  font-size: 10px;
   font-family: 'Poppins', sans-serif;
   background-image: url("./static/sky.png");
   background-repeat: no-repeat;
@@ -16,7 +16,6 @@ html {
 }
 
 * {
-
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -28,14 +27,22 @@ html {
 
 span.underline {
   position: relative;
-  text-decoration: underline #30E7B0 10px;
-  text-underline-offset: 18px;
+  text-decoration: underline #30E7B0 5px;
+  text-underline-offset: 0.9rem;
 }
 
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #home .image {
     display: none;
+  }
+
+  body > section {
+    padding: 4rem 3rem 0rem;
+  }
+
+  body section p:first-child {
+    margin-top: 0;
   }
   
   body {
@@ -47,15 +54,14 @@ span.underline {
   }
   
   .grid-container {
-    width: 100vw;
-    padding: 4rem;
-    padding-top: 15vh;
+    width: 100%;
+    padding-top: 20vh;
   }
   
   .grid-container h1 {
     color: #fff;
     font-weight: 800;
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
   }
   
@@ -64,7 +70,7 @@ span.underline {
   }
 
   #hi h1:nth-child(even) {
-    font-size: 7rem;
+    font-size: 5rem;
     text-transform: uppercase;
   }
   
@@ -80,22 +86,21 @@ span.underline {
     backdrop-filter: blur(7px);
     text-align: right;
     border-radius: 0 15px 15px 0;
-    padding: 2rem 2rem 2rem 4rem;
+    padding: 3rem;
     margin: 4rem 0;
-    margin-left: -4rem;
-    width: 80%;
+    margin-left: -3rem;
+    width: 90%;
   }
   
   .info .glass-box:nth-child(even) {
-    margin-right: -4rem;
+    margin-right: -3rem;
     align-self: flex-end;
     text-align: left;
-    padding: 2rem 4rem 2rem 2rem;
     border-radius: 15px 0 0 15px;
   }
 
   .glass-box p{
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgba(255, 255, 255, 0.95);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
@@ -107,18 +112,13 @@ span.underline {
   
 
   
-  #about {
-    padding: 4rem;
-  }
+
   
   .top {
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
   }
 
-  .top h1{
-    margin-top: 3rem;
-  }
 
   #about .top .two,
   #about .top .three {
@@ -139,22 +139,18 @@ span.underline {
     margin: 3rem 0;
   }
   
-  #portfolio {
-    padding: 4rem 0 0 0;
-  }
   
   .p-bottom {
     margin-top: 4rem;
     /* background-color: rgba(229, 249, 255, 0.807); */
     border-radius: 40px;
-    padding: 1rem 5rem 7rem;
   }
   
   #portfolio .card {
     background: #ffffff;
     box-shadow: 2px 4px 20px rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    padding: 5rem;
+    padding: 3rem;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -182,12 +178,6 @@ span.underline {
     font-weight: 400;
     font-size: 2rem;
   }
-  
-  #random {
-    height: 60vh;
-    padding: 4rem;
-  }
-  
 
   
   .glass-box-2 {
@@ -207,6 +197,10 @@ span.underline {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.904);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  #random{
+    padding-bottom: 5rem;
   }
 
 }

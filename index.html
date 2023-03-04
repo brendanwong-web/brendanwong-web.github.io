@@ -7,28 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
     <script src="https://kit.fontawesome.com/e9a1cb2914.js" crossorigin="anonymous"></script>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="App Title">
-    <meta name="apple-itunes-app" content="app-id=APP_ID, affiliate-data=AFFILIATE_ID, app-argument=http/url-sample.com"> <!-- App Banner. -->
-    <meta name="format-detection" content="telephone=no">
-    <link rel="apple-touch-icon" href="/graphics/apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" href="/graphics/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="/graphics/apple-icon-57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/graphics/apple-icon-72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/graphics/apple-icon-114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/graphics/apple-icon-144.png">
-    <link rel="alternate" href="ios-app://APP-ID/http/url-sample.com"> <!-- Apple iOS app deep linking. -->
-    <meta property="al:ios:url" content="applinks://docs">
-    <meta property="al:ios:app_store_id" content="12345">
-    <meta property="al:ios:app_name" content="App Links">
-    <!-- Google Android. -->
-    <meta name="theme-color" content="#E64545">
-    <meta name="google-play-app" content="app-id=package-name">
-    <link rel="alternate" href="android-app://package-name/http/url-sample.com"> <!-- Android app deep linking. -->
-    <meta property="al:android:url" content="applinks://docs">
-    <meta property="al:android:app_name" content="App Links">
-    <meta property="al:android:package" content="org.applinks">
+    
   </head>
   <body>
     <section id="home">
@@ -133,7 +112,7 @@
       window.onload = () => {
         tl.delay(1);
         tl.from('#hi', {
-          y: '-300px',
+          y: '-100px',
           duration: '1',
           ease: 'Power4.easeOut'
         });
@@ -143,22 +122,21 @@
             start: 'top 50%',
             end: 'center center'
           },
-          y: '300px',
+          y: '200px',
           scale: 1.5,
           opacity: '0',
-          duration: '2',
-          ease: 'Power4.easeOut',
-          delay: 3
+          duration: '1.5',
+          ease: 'Power4.easeOut'
         });
         gsap.from('.glass-box', {
           scrollTrigger: {
             trigger: '.glass-box',
-            start: 'top 40%',
+            start: 'top 50%',
             end: 'center center',
-            scrub: 2
+            scrub: 1
           },
-          stagger: 2,
-          x: '-100px',
+          stagger: 0.5,
+          y: '150px',
           opacity: '0',
           duration: '2',
           ease: 'Expo.easeOut',
@@ -166,25 +144,27 @@
         gsap.from('.info .top', {
           scrollTrigger: {
             trigger: '.glass-box',
-            start: 'top 40%',
-            end: 'center center'
+            start: 'top 70%',
+            end: 'center center',
+            scrub: 1
           },
-          x: '-100px',
+          y: '200px',
+          scale: 1.5,
           opacity: '0',
-          duration: '1',
+          duration: '2',
           ease: 'Expo.easeOut',
         });
         gsap.from('.card', {
           scrollTrigger: {
             trigger: '.p-bottom',
-            start: 'top 50%',
+            start: 'top 80%',
             end: 'center center',
-            scrub: 0.5
+            scrub: 1
           },
           opacity: '0',
-          y: '200px',
+          y: '100px',
           stagger: '1',  
-          duration: '0.5',
+          duration: '1',
           ease: 'Power4.easeOut'
         })
         gsap.from('#presence', {
