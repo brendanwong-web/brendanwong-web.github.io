@@ -47,6 +47,8 @@ span.underline {
   
   body {
     backdrop-filter: blur(16px) sepia(40%) brightness(80%);
+    height: calc(100% + 193px);
+    min-height: -webkit-fill-available;
   }
   
   .image {
