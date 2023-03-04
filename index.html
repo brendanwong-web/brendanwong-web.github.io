@@ -4,6 +4,7 @@
 
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
+    <script src="https://kit.fontawesome.com/e9a1cb2914.js" crossorigin="anonymous"></script>
 
   </head>
   <body>
@@ -13,15 +14,41 @@
       </div>
       <div class="grid-container">
         <div id="hi">
-          <h1>Hi,</h1>
-          <h1>I'm <span>Brendan</span></h1>
+          <h1>Life is </h1>
+          <h1>too <span>short</span>,</h1>
+          <h1>to not try</h1>
+          <h1><span>everything</span></h1>
         </div>
         <div class="info">
+          <div class="top">
+            <h1>Skills</h1>
+          </div>
             <div class="glass-box">
-              <p>Fullstack web developer.</p>
+              <p>Solidworks Fusion360
+              </p>
             </div>
             <div class="glass-box">
-              <p>Designer and creator of engaging web experiences</p>
+              <p>HTML CSS JS</p>
+              <p>Python</p>
+              <p>React Svelte</p>
+            </div>
+            <div class="glass-box">
+              <p>Photoshop</p>
+              <p>Illustrator</p>
+            </div>
+            <div class="glass-box">
+              <p>Chinese</p>
+              <p>German</p>
+              <p>Korean</p>
+            </div>
+            <div class="glass-box">
+              <p>Basketball</p>
+              <p>Skateboarding </p>
+              <p>Ping Pong</p>
+            </div>
+            <div class="glass-box">
+              <p>Baking</p>
+              <p>Cooking</p>
             </div>
         </div>
       </div>
@@ -29,17 +56,17 @@
     <section id="about">
       <div class="top">
         
-        <img class="one" src="https://media.giphy.com/media/cXblnKXr2BQOaYnTni/giphy.gif" />
+        <!-- <img class="one" src="https://media.giphy.com/media/cXblnKXr2BQOaYnTni/giphy.gif" />
         <img class="two" src="https://media.giphy.com/media/dV8K4Rwzeuvn3JyJO9/giphy.gif" />
-        <img class="three" src="https://media.giphy.com/media/SZQBPO4NqHkh6wmdXk/giphy.gif" />
+        <img class="three" src="https://media.giphy.com/media/SZQBPO4NqHkh6wmdXk/giphy.gif" /> -->
         <h1>about me</h1>
       </div>
       <div class="bottom">
         <p>
-        My passion for coding began 2 years ago with python. Nowadays, I split my time between learning modern web technologies, and my other hobbies like basketball and skateboarding.
+        My passion for coding began 2 years ago with python and front end web technologies. After entering University and mucking about for a couple semesters, exposing myself to new hobbies, i think ive finally narrowed my professional interests down to a couple of main areas.
         </p>
         <p>
-        I enjoy creating useful and aesthetically pleasing websites and applications, especially for people looking to refresh their dated websites.
+          I think I want to play a part in mankinds goal to <span class="underline">live sustainably</span> and as one with nature. Whether that is through developments in <span class="underline">energy production</span>, better green technology or improvements in agritech. Im also super interested in <span class="underline">product design</span>.
         </p>
       </div>
     </section>
@@ -49,33 +76,28 @@
         </div>
         <div class="p-bottom">
           <div class="card">
-            <img src='./static/lht.png' alt="lht"/>
-            <a href="https://www.learning-hearts.com">Learning Hearts</a>
+            <a href="https://www.learning-hearts.com" target="_blank">Learning Hearts <i class="fa-solid fa-up-right-from-square"></i></a>
             <p>
-              This was a presentational site done for Learning Hearts Therapy. The client wanted a simple site for displaying information about their company. 
+              This was a presentational site done for Learning Hearts Therapy. The client wanted a simple site for displaying information about their company. Singlehandedly designed with figma and built with 11ty.
             </p>
           </div>
           <div class="card">
-            <img src='./static/temp.png' alt="lht"/>
-            <a href="https://lhttempapp.netlify.app/">Temperature app</a>
+            <a href="www.kampung-eats.com" target="_blank">kampungEats <i class="fa-solid fa-up-right-from-square"></i></a>
             <p>
-              This was an app built with svelte that allows users to sign in with Google and log their temperatures.
+              Presentational website built with wordpress for a client.
             </p>
           </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="top">
-          <h1>contact me</h1>
-        </div>
-        <div>
-          <p>
-            I’d love to help you increase your <span id="presence">web presence </span>, just drop me an email!
-          </p>
-          <div class="glass-box-2">
-          <a id="mail" href="mailto:brendanwong24@gmail.com">brendanwong24@gmail.com</a>
-          </div>
-        </div>
+    <section id="random">
+      <div class="top">
+        <h1>Contact</h1>
+      </div>
+      <div class="bottom">
+        <p>
+          I am currently looking for Internships for the periond of July - Dec 2023
+        </p>
+      </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
@@ -86,28 +108,58 @@
       var tl = gsap.timeline();
 
       window.onload = () => {
-        tl.delay(3);
+        tl.delay(1);
         tl.from('#hi', {
           y: '-300px',
-          opacity: '0',
           duration: '1',
-          ease: 'Power4.easeOut',
+          ease: 'Power4.easeOut'
         });
-        tl.from('.info', {
+        gsap.to('#hi h1:last-child', {
+          scrollTrigger: {
+            trigger: '.info',
+            start: 'top 50%',
+            end: 'center center'
+          },
+          y: '300px',
+          scale: 1.5,
+          opacity: '0',
+          duration: '2',
+          ease: 'Power4.easeOut',
+          delay: 3
+        });
+        gsap.from('.glass-box', {
+          scrollTrigger: {
+            trigger: '.glass-box',
+            start: 'top 40%',
+            end: 'center center',
+            scrub: 2
+          },
+          stagger: 2,
           x: '-100px',
           opacity: '0',
           duration: '2',
           ease: 'Expo.easeOut',
         });
+        gsap.from('.info .top', {
+          scrollTrigger: {
+            trigger: '.glass-box',
+            start: 'top 40%',
+            end: 'center center'
+          },
+          x: '-100px',
+          opacity: '0',
+          duration: '1',
+          ease: 'Expo.easeOut',
+        });
         gsap.from('.card', {
           scrollTrigger: {
             trigger: '.p-bottom',
-            start: 'top 90%',
+            start: 'top 50%',
             end: 'center center',
             scrub: 0.5
           },
           opacity: '0',
-          x: '-200px',
+          y: '200px',
           stagger: '1',  
           duration: '0.5',
           ease: 'Power4.easeOut'

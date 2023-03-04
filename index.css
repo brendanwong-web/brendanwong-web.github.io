@@ -5,8 +5,14 @@
 }
 
 html {
+  width: 100vw; 
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
+  background-image: url("./static/sky.png");
+  background-repeat: no-repeat;
+  background-size: 200% 180%;
+  background-attachment: scroll;
+  overflow-x: hidden;
 }
 
 * {
@@ -16,16 +22,24 @@ html {
   padding: 0;
 }
 
+.d-none {
+  display: none;
+}
+
+span.underline {
+  position: relative;
+  text-decoration: underline #30E7B0 10px;
+  text-underline-offset: 18px;
+}
+
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #home .image {
     display: none;
   }
   
   body {
-    background-image: url("./static/sky.png");
-    background-repeat: no-repeat;
-    background-size: 200% 130%;
-    background-attachment: scroll;
+    backdrop-filter: blur(16px) sepia(40%) brightness(80%);
   }
   
   .image {
@@ -33,21 +47,25 @@ html {
   }
   
   .grid-container {
-    height: 100vh;
     width: 100vw;
     padding: 4rem;
-    padding-top: 20vh;
+    padding-top: 15vh;
   }
   
   .grid-container h1 {
     color: #fff;
     font-weight: 800;
     font-size: 6rem;
-  
+    text-align: center;
   }
   
   #hi {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  #hi h1:nth-child(even) {
+    font-size: 7rem;
+    text-transform: uppercase;
   }
   
   .grid-container h1 span {
@@ -55,20 +73,30 @@ html {
   }
   
   .glass-box {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(104, 101, 106, 0.25);
     box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(7px);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 4rem 0;
     border-top: 1px solid rgba(255,255,255,0.2);
     border-left: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(7px);
+    text-align: right;
+    border-radius: 0 15px 15px 0;
+    padding: 2rem 2rem 2rem 4rem;
+    margin: 4rem 0;
+    margin-left: -4rem;
     width: 80%;
   }
   
+  .info .glass-box:nth-child(even) {
+    margin-right: -4rem;
+    align-self: flex-end;
+    text-align: left;
+    padding: 2rem 4rem 2rem 2rem;
+    border-radius: 15px 0 0 15px;
+  }
+
   .glass-box p{
     font-size: 4rem;
-    color: rgba(255, 255, 255, 0.76);
+    color: rgba(255, 255, 255, 0.95);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   }
   
@@ -77,9 +105,7 @@ html {
     flex-direction: column;
   }
   
-  .info div:nth-of-type(2) {
-    align-self: flex-end;
-  }
+
   
   #about {
     padding: 4rem;
@@ -87,7 +113,7 @@ html {
   
   .top {
     text-align: center;
-    margin: 6rem 0;
+    margin: 2rem 0;
   }
 
   .top h1{
@@ -118,18 +144,18 @@ html {
   }
   
   .p-bottom {
-    margin-top: 10rem;
-    background-color: white;
+    margin-top: 4rem;
+    /* background-color: rgba(229, 249, 255, 0.807); */
     border-radius: 40px;
     padding: 1rem 5rem 7rem;
   }
   
   #portfolio .card {
-    background: #30E7B0;
-    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    box-shadow: 2px 4px 20px rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    padding: 7rem;
-    text-align: center;
+    padding: 5rem;
+    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -147,9 +173,9 @@ html {
   .card a {
     color: rgb(4, 27, 23);
     font-weight: 700;
-    font-size: 2.5rem;
-    text-decoration: none;
-    margin: 3rem 0;
+    font-size: 3rem;
+    text-decoration: underline;
+    margin: 0 0 3rem 0;
   }
   
   .card p {
@@ -157,25 +183,12 @@ html {
     font-size: 2rem;
   }
   
-  #contact {
-    height: 100vh;
-    padding: 5rem 0;
+  #random {
+    height: 60vh;
+    padding: 4rem;
   }
   
-  #contact div:nth-of-type(2) {
-    text-align: center;
-  }
-  
-  #contact div:nth-of-type(2) p {
-    color: #fff;
-    font-weight: 500;
-    font-size: 4rem;
-    margin: 2rem 5rem;
-  }
-  
-  #contact div:nth-of-type(2) span {
-    color: rgb(238, 255, 6);
-  }
+
   
   .glass-box-2 {
     background: rgba(255, 255, 255, 0.25);
