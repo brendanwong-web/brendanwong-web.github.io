@@ -10,151 +10,206 @@
     
   </head>
   <body>
-    <section id="home">
-      <div class="image">
-        <img src='./static/fuji.jpg' />
+    <nav id="side-bar">
+      <div class="toggle-btn" id="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <div class="grid-container">
-        <div id="hi">
-          <h1>Life is </h1>
-          <h1>too <span>short</span>,</h1>
-          <h1>to not try</h1>
-          <h1><span>everything</span></h1>
-        </div>
-        <div class="info">
-          <div class="top">
-            <h1>Skills</h1>
-          </div>
-            <div class="glass-box">
-              <p>Solidworks Fusion360
-              </p>
-            </div>
-            <div class="glass-box">
-              <p>HTML CSS JS</p>
-              <p>Python</p>
-              <p>React Svelte</p>
-            </div>
-            <div class="glass-box">
-              <p>Photoshop</p>
-              <p>Illustrator</p>
-            </div>
-            <div class="glass-box">
-              <p>Chinese</p>
-              <p>German</p>
-              <p>Korean</p>
-            </div>
-            <div class="glass-box">
-              <p>Basketball</p>
-              <p>Skateboarding </p>
-              <p>Ping Pong</p>
-            </div>
-            <div class="glass-box">
-              <p>Baking</p>
-              <p>Cooking</p>
-            </div>
-        </div>
+      
+      <div class="tray">
+        <ul>
+          <li><a href="#" onclick="scrollToMyRef()">Home</a></li>
+        </ul>
       </div>
-    </section>
-    <section id="about">
-      <div class="top">
-        
-        <!-- <img class="one" src="https://media.giphy.com/media/cXblnKXr2BQOaYnTni/giphy.gif" />
-        <img class="two" src="https://media.giphy.com/media/dV8K4Rwzeuvn3JyJO9/giphy.gif" />
-        <img class="three" src="https://media.giphy.com/media/SZQBPO4NqHkh6wmdXk/giphy.gif" /> -->
-        <h1>about me</h1>
-      </div>
-      <div class="bottom">
-        <p>
-        My passion for coding began 2 years ago with python and front end web technologies. After entering University and mucking about for a couple semesters, exposing myself to new hobbies, i think ive finally narrowed my professional interests down to a couple of main areas.
-        </p>
-        <p>
-          I think I want to play a part in mankinds goal to <span class="underline">live sustainably</span> and as one with nature. Whether that is through developments in <span class="underline">energy production</span>, better green technology or improvements in agritech. Im also super interested in <span class="underline">product design</span>.
-        </p>
-      </div>
-    </section>
-    <section id="portfolio">
-        <div class="top">
-          <h1>Portfolio</h1>
-        </div>
-        <div class="p-bottom">
-          <div class="card">
-            <a href="https://www.learning-hearts.com" target="_blank">Learning Hearts <i class="fa-solid fa-up-right-from-square"></i></a>
-            <p>
-              This was a presentational site done for Learning Hearts Therapy. The client wanted a simple site for displaying information about their company. Singlehandedly designed with figma and built with 11ty.
-            </p>
-          </div>
-          <div class="card">
-            <a href="www.kampung-eats.com" target="_blank">kampungEats <i class="fa-solid fa-up-right-from-square"></i></a>
-            <p>
-              Presentational website built with wordpress for a client.
-            </p>
-          </div>
-        </div>
-    </section>
-    <section id="random">
-      <div class="top">
-        <h1>Contact</h1>
-      </div>
-      <div class="bottom">
-        <p>
-          I am currently looking for Internships for the periond of July - Dec 2023
-        </p>
-      </div>
-    </section>
+    </nav>
+    <div>
 
+    
+      <section id="home">
+        <div class="image">
+          <img src='./static/fuji.jpg' />
+        </div>
+        <div class="grid-container container">
+          <div id="hi">
+            <h1>Hi, I'm <span>Brendan.</span></h1>
+            <p>
+              I believe we stop living when we stop learning. 
+              I’m a mechanical engineer by trade with a passion for web technologies and design. 
+            </p>
+          </div>
+          <img src="./static/tree2.png" alt="" class="bgimg">
+        </div>
+      </section>
+      <section id="skills">
+        <div class="container">
+
+          <h6>01 skills</h6>
+          <div class="bottom">
+            <h3>solidworks</h3>
+            <h3>Fusion 360</h3>
+            <h3>Python</h3>
+            <h3>HTML/CSS/JS</h3>
+            <h3>react/svelte</h3>
+            <h3>mysql</h3>
+            <h3>Photoshop</h3>
+            <h3>German b1</h3>
+            <h3>Korean a2</h3>
+          </div>
+          <img src="./static/vine.png" alt="" class="bgimg">
+        </div>
+      </section>
+      <section id="portfolio">
+        <div class="container">
+
+          <h6>01 Portfolio</h6>
+          <div class="bottom">
+            <div class="card">
+              <div class="head">
+                <div class="title">
+                  <h3>Learning Hearts</h3>
+                  <h4>Web dev - UI/UX Design</h4>
+                </div>
+                <div class="date">
+                  20 <br>21
+                </div>
+              </div>
+              <img src="./static/lht.png" alt="">
+              <div class="content">
+                <div>
+
+                  <p>
+                    Website built from scratch with Svelte for Learning Hearts Therapy (LHT), an educational therapy center. 
+                    
+                      
+                  </p>
+                  <p>
+                    Rebuilt in September 2021 using 11ty for better performance,  templating and code reusability using HTML, CSS, JS, Nunjucks, Markdown, and Alpine.js.
+                    Complete redesign done with Figma single handedly.
+                  </p>
+                  <a href="https://www.learning-hearts.com/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="head">
+                <div class="title">
+                  <h3>Resonance</h3>
+                  <h4>Web dev - UI/UX Design</h4>
+                </div>
+                <div class="date">
+                  20 <br>21
+                </div>
+              </div>
+              <img src="./static/resonance.png" alt="">
+              <div class="content">
+                <div>
+
+                  <p>
+                    In my 6-month stint at Resonance, I worked as the project head for two main projects, namely the redesign of the Ministry of Manpower's (MOM) Intranet, as well as the website for SUSS' open house. As the most experienced developer, I spearheaded the adoption of good coding practices, shifting away from hardcoded “responsive” design to truly responsive websites. 
+                  </p>
+                  <p>
+                    Before leaving, I was also working with my boss to adopt the usage of 11ty for better project management. 
+                  </p>
+                  <a href="https://www.resonance.com.sg/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="head">
+                <div class="title">
+                  <h3>Kampung Eats</h3>
+                  <h4>Web dev - UI/UX Design</h4>
+                </div>
+                <div class="date">
+                  20 <br>22
+                </div>
+              </div>
+              <img src="./static/ke.png" alt="">
+              <div class="content">
+                <div>
+
+                  <p>
+                    Website built with wordpress for a client. Some features requested by the client were not available natively and hence resolved via proprietary CSS and JS solutions.
+                  </p>
+                  <a href="www.kampung-eats.com" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="head">
+                <div class="title">
+                  <h3>Hathaway</h3>
+                  <h4>Chef de partie</h4>
+                </div>
+                <div class="date">
+                  20 <br>22
+                </div>
+              </div>
+              <img src="https://ucarecdn.com/1c773f69-5948-4a97-90cf-57415f628af7/" alt="">
+              <div class="content">
+                <div>
+
+                  <p class="no-margin">
+                    Assisted with mise-en-place as well as running the pass during dinner service.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      <section id="about">
+        <div class="container">
+
+          <h6>03 About me</h6>
+          <div class="bottom">
+            <div class="frame">
+<img src="./static/IMG_9155.jpg" alt="">
+<h3>Brendan</h3>
+            </div>
+            <p>
+            My passion for coding began 2 years ago with python and front end web technologies. After entering University and mucking about for a couple semesters, exposing myself to new hobbies, i think ive finally narrowed my professional interests down to a couple of main areas.
+            </p>
+            <p>
+              I think I want to play a part in mankinds goal to <span class="underline">live sustainably</span> and as one with nature. Whether that is through developments in <span class="underline">energy production</span>, better green technology or improvements in agritech. Im also super interested in <span class="underline">product design</span>.
+            </p>
+          </div>
+          <img src="./static/vine2.png" alt="" class="bgimg">
+        </div>
+      </section>
+
+      <section id="random">
+        <div class="top">
+          <h1>Contact</h1>
+        </div>
+        <div class="bottom">
+          <p>
+            I am currently looking for Internships for the periond of July - Dec 2023
+          </p>
+        </div>
+      </section>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
     <script>
+      scrollToMyRef = (id) => {
+        var ref = document.getElementById("portfolio");
+        setTimeout(function () {
+            ref.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+      }, 100);
+      show()
+      };
+
       gsap.registerPlugin(ScrollTrigger);
       var tl = gsap.timeline();
 
       window.onload = () => {
         tl.delay(1);
-        tl.from('#hi', {
-          y: '150px',
-          opacity: 0.8,
-          duration: '1',
-          ease: 'Power4.easeOut'
-        });
-        gsap.to('#hi h1:last-child', {
-          scrollTrigger: {
-            trigger: '.info',
-            start: 'top 50%',
-            end: 'center center'
-          },
-          y: '200px',
-          scale: 1.5,
-          opacity: '0',
-          duration: '1.5',
-          ease: 'Power4.easeOut'
-        });
-        gsap.from('.glass-box', {
-          scrollTrigger: {
-            trigger: '.glass-box',
-            start: 'top 50%',
-            end: 'center center',
-            scrub: 1
-          },
-          stagger: 0.5,
-          y: '150px',
-          opacity: '0',
-          duration: '2',
-          ease: 'Expo.easeOut',
-        });
-        gsap.from('.info .top', {
-          scrollTrigger: {
-            trigger: '.glass-box',
-            start: 'top 70%',
-            end: 'center center',
-            scrub: 1
-          },
-          y: '200px',
-          scale: 1.5,
-          opacity: '0',
-          duration: '2',
-          ease: 'Expo.easeOut',
-        });
         gsap.from('.card', {
           scrollTrigger: {
             trigger: '.p-bottom',
@@ -180,6 +235,13 @@
       
       }
       
+      var toggleBtn = document.getElementById('toggle-btn');
+      toggleBtn.addEventListener('click' ,  show);
+
+      function show(){
+        var sideBar = document.getElementById('side-bar');
+        sideBar.classList.toggle('active');
+      }
     </script>
   </body>
 </html>
