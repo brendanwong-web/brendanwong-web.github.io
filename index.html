@@ -239,26 +239,20 @@
 
       window.onload = () => {
         tl.delay(1);
-        gsap.from('.card', {
-          scrollTrigger: {
-            trigger: '.p-bottom',
-            start: 'top 80%',
-            end: 'center center',
-            scrub: 1
-          },
+        gsap.from('#hi', {
           opacity: '0',
           y: '100px',
-          stagger: '1',  
-          duration: '1',
+          duration: '1.5',
           ease: 'Power4.easeOut'
         })
-        gsap.from('#presence', {
+        gsap.from('#skills h3', {
           scrollTrigger: {
-            trigger: '#presence',
+            trigger: 'h3',
             start: 'top 80%',
           },
+          stagger: 0.2,
           opacity: 0,
-          duration: '2',
+          duration: '0.5',
         })
 
       
