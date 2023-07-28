@@ -16,23 +16,24 @@
         <span></span>
         <span></span>
       </div>
-      
-      <div class="tray">
-        <ul>
-          <li><a href="#" onclick="scrollToMyRef()">Home</a></li>
-        </ul>
+      <div class="container--tray">
+
+        <div class="tray">
+          <ul>
+            <li><a href="#skills" onclick="return scrollToMyRef(event)">skills</a></li>
+            <li><a href="#portfolio" onclick="return scrollToMyRef(event)">Portfolio</a></li>
+            <li><a href="#about" onclick="return scrollToMyRef(event)">About</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div>
+    <div class="container--padbottom container--grid">
 
     
       <section id="home">
-        <div class="image">
-          <img src='./static/fuji.jpg' />
-        </div>
         <div class="grid-container container">
           <div id="hi">
-            <h1>Hi, I'm <span>Brendan.</span></h1>
+            <h1>Hi, I'm <span>Brendan</span>.</h1>
             <p>
               I believe we stop living when we stop learning. 
               I’m a mechanical engineer by trade with a passion for web technologies and design. 
@@ -156,6 +157,26 @@
                 </div>
               </div>
             </div>
+            <div class="card">
+              <div class="head">
+                <div class="title">
+                  <h3>Schneider Electric</h3>
+                  <h4>Innovation Intern</h4>
+                </div>
+                <div class="date">
+                  20 <br>23
+                </div>
+              </div>
+              <img src="https://mma.prnewswire.com/media/844395/Schneider_LIO_Logo.jpg?p=twitter" alt="">
+              <div class="content">
+                <div>
+
+                  <p class="no-margin">
+                    In progress
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
     </section>
@@ -174,19 +195,24 @@
             <p>
               I think I want to play a part in mankinds goal to <span class="underline">live sustainably</span> and as one with nature. Whether that is through developments in <span class="underline">energy production</span>, better green technology or improvements in agritech. Im also super interested in <span class="underline">product design</span>.
             </p>
+            <img src="./static/vine2.png" alt="" class="bgimg">
           </div>
-          <img src="./static/vine2.png" alt="" class="bgimg">
-        </div>
-      </section>
-
-      <section id="random">
-        <div class="top">
-          <h1>Contact</h1>
-        </div>
-        <div class="bottom">
-          <p>
-            I am currently looking for Internships for the periond of July - Dec 2023
-          </p>
+          <div class="container--button">
+            <a href="https://www.instagram.com/uglyf1acko" target="_blank" class="button button--instagram">
+              <span class="icon fab fa-instagram"></span>
+              <span class="text">
+                @uglyf1acko
+              </span>
+            </a>
+          
+            <a target="_blank" href="https://www.linkedin.com/in/brendan-wong-74bb0b203/" class="button button--linkedin">
+              <span class="icon fab fa-linkedin-in"></span>
+              <span class="text">
+                @Brendan Wong
+              </span>
+            </a>
+          </div>
+          
         </div>
       </section>
     </div>
@@ -194,8 +220,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
     <script>
-      scrollToMyRef = (id) => {
-        var ref = document.getElementById("portfolio");
+      scrollToMyRef = (event) => {
+        
+        refName = event.srcElement.innerHTML.toLowerCase()
+        var ref = document.getElementById(refName);
         setTimeout(function () {
             ref.scrollIntoView({
                 behavior: "smooth",
@@ -203,6 +231,7 @@
             });
       }, 100);
       show()
+      return false
       };
 
       gsap.registerPlugin(ScrollTrigger);
