@@ -39,7 +39,7 @@
               I’m a mechanical engineer by trade with a passion for web technologies and design. 
             </p>
           </div>
-          <img src="./static/tree2.png" alt="" class="bgimg">
+          <img src="./static/tree2.png" alt="" class="bgimg tree">
         </div>
       </section>
       <section id="skills">
@@ -57,7 +57,7 @@
             <h3>German b1</h3>
             <h3>Korean a2</h3>
           </div>
-          <img src="./static/vine.png" alt="" class="bgimg">
+          <img src="./static/vine.png" alt="" class="bgimg vine">
         </div>
       </section>
       <section id="portfolio">
@@ -195,7 +195,7 @@
             <p>
               I think I want to play a part in mankinds goal to <span class="underline">live sustainably</span> and as one with nature. Whether that is through developments in <span class="underline">energy production</span>, better green technology or improvements in agritech. Im also super interested in <span class="underline">product design</span>.
             </p>
-            <img src="./static/vine2.png" alt="" class="bgimg">
+            <img src="./static/vine2.png" alt="" class="bgimg vine2">
           </div>
           <div class="container--button">
             <a href="https://www.instagram.com/uglyf1acko" target="_blank" class="button button--instagram">
@@ -220,51 +220,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
     <script>
-      scrollToMyRef = (event) => {
-        
-        refName = event.srcElement.innerHTML.toLowerCase()
-        var ref = document.getElementById(refName);
-        setTimeout(function () {
-            ref.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-      }, 100);
-      show()
-      return false
-      };
-
-      gsap.registerPlugin(ScrollTrigger);
-      var tl = gsap.timeline();
-
-      window.onload = () => {
-        tl.delay(1);
-        gsap.from('#hi', {
-          opacity: '0',
-          y: '100px',
-          duration: '1.5',
-          ease: 'Power4.easeOut'
-        })
-        gsap.from('#skills h3', {
-          scrollTrigger: {
-            trigger: 'h3',
-            start: 'top 80%',
-          },
-          stagger: 0.2,
-          opacity: 0,
-          duration: '0.5',
-        })
-
       
-      }
-      
-      var toggleBtn = document.getElementById('toggle-btn');
-      toggleBtn.addEventListener('click' ,  show);
-
-      function show(){
-        var sideBar = document.getElementById('side-bar');
-        sideBar.classList.toggle('active');
-      }
     </script>
+    <script src="./main.js"></script>
   </body>
 </html>
