@@ -600,12 +600,12 @@ section {
 }
 
 #home .bgimg {
-  width: 110%;
+  width: 130%;
   top: -7rem;
-  left: -86%;
-  -webkit-transform: rotate(125deg);
-      -ms-transform: rotate(125deg);
-          transform: rotate(125deg);
+  right: -200%;
+  -webkit-transform: rotate(-145deg);
+      -ms-transform: rotate(-145deg);
+          transform: rotate(-145deg);
 }
 
 #skills .bgimg {
@@ -618,12 +618,7 @@ section {
 }
 
 #about .bgimg {
-  width: 87%;
-  bottom: -9rem;
-  right: -42rem;
-  -webkit-transform: rotate(12deg);
-      -ms-transform: rotate(12deg);
-          transform: rotate(12deg);
+  display: none;
 }
 
 #home {
